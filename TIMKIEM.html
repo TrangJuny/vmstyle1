@@ -361,8 +361,8 @@
     <div class="container">
       <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb" class="breadcrumb-primary">
         <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Library</li>
+          <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
+          <li class="breadcrumb-item active" aria-current="page">KẾT QUẢ TÌM KIẾM TỪ KHOÁ "AO"</li>
         </ol>
       </nav>
     </div>
@@ -373,44 +373,53 @@
 
     <!-- Slides -->
 
-    <div class="wrap-slide">
-      <div class="slides">
-        <div class="image">
-          <img src="./assets/images/slide-1.webp" alt="slide-1" />
-        </div>
-        <div class="image">
-          <img src="./assets/images/slide-2.webp" alt="slide-1" />
-        </div>
-        <div class="image">
-          <img src="./assets/images/slide-3.webp" alt="slide-1" />
-        </div>
-        <div class="image">
-          <img src="./assets/images/slide-4.webp" alt="slide-1" />
-        </div>
-      </div>
-    </div>
+
 
 
 
 
 
     <!-- Section label -->
-    <div class="section-title primary-under">SALE ĐỒNG GIÁ</div>
+    <!-- <div class="section-title primary-under">SALE ĐỒNG GIÁ</div> -->
 
-    <!-- tab  -->
-    <div class="nav-tab-primary mb-4">
-      <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">59k</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">79k</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">99k</a>
-        <a class="flex-sm-fill text-sm-center nav-link disabled">109k</a>
-      </nav>
+    <div class="filter mt-4">
+      <select class="form-select  form-select-sm max-w-200" aria-label="Default select example">
+        <option selected>Mới nhất</option>
+        <option value="1">Giá tăng</option>
+        <option value="2">Giá giảm</option>
+        <option value="3">Tên A-Z</option>
+        <option value="3">Tên Z-A</option>
+      </select>
+      <!-- <div class="form-check  form-check-inline">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled">
+        <label class="form-check-label" for="flexRadioDisabled">
+          Giá tăng dần
+        </label>
+      </div>
+      <div class="form-check  form-check-inline">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked>
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          Giá giảm dần
+        </label>
+      </div>
+      <div class="form-check  form-check-inline">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked>
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          Hàng mới nhất
+        </label>
+      </div>
+      <div class="form-check  form-check-inline">
+        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked>
+        <label class="form-check-label" for="flexRadioCheckedDisabled">
+          Hàng cũ nhất
+        </label>
+      </div> -->
     </div>
 
     <!-- list product -->
     <div class="product-list mb-4">
       <div class="row">
-        <div class="col-md-3 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="product-item mt-4">
             <a href="#" class="product-item__image">
               <img src="./assets/images/product1.webp" alt="slide-1" />
@@ -453,7 +462,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="product-item mt-4">
             <a href="#" class="product-item__image">
               <img src="./assets/images/product1.webp" alt="slide-1" />
@@ -495,7 +504,7 @@
             <div class="product-item__price">600.000 vnđ</div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="product-item mt-4">
             <a href="#" class="product-item__image">
               <img src="./assets/images/product1.webp" alt="slide-1" />
@@ -537,7 +546,7 @@
             <div class="product-item__price">600.000 vnđ</div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="product-item mt-4">
             <a href="#" class="product-item__image">
               <img src="./assets/images/product1.webp" alt="slide-1" />
@@ -579,7 +588,7 @@
             <div class="product-item__price">600.000 vnđ</div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-4 col-6">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
           <div class="product-item mt-4">
             <a href="#" class="product-item__image">
               <img src="./assets/images/product1.webp" alt="slide-1" />
@@ -635,6 +644,8 @@
           </li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item page-item-more">...</li>
+          <li class="page-item"><a class="page-link" href="#">33</a></li>
           <li class="page-item">
             <a class="page-link" href="#" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>

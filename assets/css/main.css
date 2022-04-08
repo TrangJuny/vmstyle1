@@ -30,6 +30,11 @@
 .page-link {
   color: #c12227 !important; }
 
+.page-item.page-item-more {
+  padding: 5px 15px;
+  font-weight: 700;
+  word-spacing: 33px; }
+
 .page-item {
   color: #c12227 !important; }
 
@@ -62,6 +67,25 @@
 
 .breadcrumb-primary .breadcrumb-item + .breadcrumb-item::before {
   color: #fff; }
+
+.form-check-input:checked {
+  background-color: #c12227;
+  border-color: #c12227; }
+
+.filter {
+  display: flex;
+  justify-content: end;
+  font-size: 14px; }
+
+.services-slider {
+  display: flex; }
+
+.nav-container .slick-current img {
+  box-shadow: 0 0 4px 2px rgba(108, 232, 220, 0.9); }
+
+@media (min-width: 1000) {
+  .slider-nav {
+    display: none !important; } }
 
 .header {
   background-color: #fff; }
@@ -380,7 +404,10 @@
         font-size: 12px;
         width: 100%;
         text-align: center;
-        padding: 10px 0; }
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
       .product-item__image .product-btn .btn-left-detail {
         border-top-right-radius: 8px; }
       .product-item__image .product-btn .add-cart {
@@ -399,12 +426,11 @@
       display: none; }
     .product-item__color .fake-radio {
       display: inline-block;
-      width: 15px;
-      height: 15px;
+      width: 13px;
+      height: 13px;
       cursor: pointer;
       border-radius: 100%;
       transition: ease 0.3s;
-      margin: 0 6px;
       border: 1px solid transparent; }
     .product-item__color .c-orange .fake-radio {
       background: #ff5722; }
@@ -421,6 +447,8 @@
     .product-item__color .color-picker input:checked ~ .fake-radio {
       border: 1px solid #fff;
       outline: solid 1px #595959; }
+    .product-item__color .color-picker + .color-picker {
+      margin-left: 7px; }
   .product-item__name {
     font-size: 14px; }
   .product-item__price-sell {
@@ -491,7 +519,6 @@
   display: flex;
   justify-content: space-between; }
   .footer__column {
-    width: 20%;
     color: #fff; }
     .footer__column p {
       font-size: 20px;
@@ -555,6 +582,9 @@
     font-size: 18px !important; }
   .wrap-cart-view {
     width: 320px; } }
+
+.max-w-200 {
+  max-width: 200px; }
 
 body {
   margin: 0 auto !important;
