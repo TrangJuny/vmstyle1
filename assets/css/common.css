@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+@media (max-width: 480px) {
+  div,
+  p {
+    font-size: 12px; }
+  .title {
+    font-size: 18px; } }

@@ -1,0 +1,55 @@
+.page-item.active .page-link {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: #fff !important;
+}
+
+.page-link {
+  color: $primary-color !important;
+}
+
+.page-item {
+  color: $primary-color !important;
+}
+
+// tabs
+.nav-tab-primary {
+  nav.nav.nav-pills {
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .nav-pills .nav-link {
+    background: #f2f0f0;
+    margin: 0.5px;
+    color: $primary-color;
+    font-size: 23px;
+  }
+
+  .nav-pills .nav-link.active,
+  .nav-pills .show > .nav-link {
+    background: $primary-color;
+  }
+}
+// breadcrumb
+.breadcrumb-primary {
+  .breadcrumb-item {
+    color: #fff;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .breadcrumb-item.active {
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .breadcrumb-item a {
+    color: #fff;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: #fff;
+  }
+}

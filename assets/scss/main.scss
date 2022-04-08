@@ -1,0 +1,12 @@
+@import "./general/settings.scss";
+@import "./components/index.scss";
+@import "./layout/index.scss";
+@import "./pages/index.scss";
+@import "./general/responsive.scss";
+
+body {
+  // max-width: 1366px;
+  margin: 0 auto !important;
+  width: 100%;
+  font-family: "Roboto", sans-serif !important;
+}

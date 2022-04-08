@@ -1,0 +1,26 @@
+.section-title {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px; }
+
+.input-search {
+  width: 200px;
+  padding: 4px 4px 4px 40px;
+  border: 1px solid #f2f2f2;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  outline: none; }
+  .input-search::-webkit-input-placeholder {
+    font-size: 14px; }
+
+.page-item.active .page-link {
+  background-color: #ddd !important;
+  border-color: #ddd !important; }
+
+.page-link {
+  color: #ddd !important; }
+
+.page-item {
+  color: #ddd !important; }

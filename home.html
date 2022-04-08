@@ -1,49 +1,980 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./assets/css/reset.css" rel="stylesheet" />
-    <link href="./assets/css/main.css" rel="stylesheet" />
-    <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
-    <title>Home</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Lib -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+  <link rel="stylesheet" href="./assets/css/slick.theme.css" />
+  <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
+
+  <!-- Main css -->
+
+  <link href="./assets/css/main.css" rel="stylesheet" />
+
+  <title>Home</title>
+
+  <!-- Reset -->
+  <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+
+  <!-- Font Roboto Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
     <header class="header">
-      <div class="header-logo">
-        <img src="./assets/images/logo.webp" />
-      </div>
-      <div class="header-menu">
-        <ul>
-          <li><a href="#">TRANG CHỦ</a></li>
-          <li><a href="#">ÁO</a></li>
-          <li><a href="#">QUẦN</a></li>
-          <li><a href="#">ĐẦM</a></li>
-          <li><a href="#">CHÂN VÁY</a></li>
-          <li><a href="#">ÁO KHOÁC & ÁO VEST</a></li>
-          <li><a href="#">CHƯƠNG TRÌNH SALE</a></li>
-        </ul>
-      </div>
-      <div class="header-search">
-        <input class="input-search" placeholder="Bạn cần tìm gì?" />
-        <i class="ion-ios-search icon-search"></i>
-      </div>
-      <div class="header-info">
-        <div class="header-info__item">
-          <i class="ion-ios-home-outline"></i>
-          <span>Hệ Thống Cửa Hàng</span>
+      <div class="row row-cols-auto d-flex justify-content-between align-items-center py-3 py-xxl-0">
+        <div class="header-logo col">
+          <img data-bs-toggle="offcanvas" data-bs-target="#toggleMenu" src="./assets/images/menu.png"
+            class="icon-search-mobile me-3 me-lg-0 d-lg-none" />
+          <img src="./assets/images/logo.png" />
         </div>
-        <div class="header-info__item">
-          <i class="ion-ios-person-outline"></i>
-          <span>Đăng Nhập/Đăng Ký</span>
+
+        <div class="offcanvas offcanvas-start menu-sidebar" tabindex="-1" id="toggleMenu"
+          aria-labelledby="offcanvasWithBackdropLabel">
+          <!-- <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+            </div>
+            <div class="offcanvas-body">
+              <p>.....</p>
+            </div> -->
+
+          <!-- Start Menu Group -->
+          <div class="wrap-menu-group">
+            <div class="menu-group">
+              <div class="menu-group__label collapsed" data-bs-toggle="collapse" aria-expanded="false"
+                data-bs-target="#collapseProduct" aria-controls="collapseProduct">
+                <span>SẢN PHẨM</span>
+                <span id="toggle-icon">+</span>
+              </div>
+              <div class="collapse" id="collapseProduct">
+                <div class="collapse-wrap-menu">
+                  <a href="#">QUẦN</a>
+                  <a href="#">ÁO</a>
+                  <a href="#">ĐẦM</a>
+                  <a href="#">CHÂN VÁY</a>
+                  <a href="#">ÁO KHOÁC - VEST</a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-group">
+              <div class="menu-group__label">
+                <a class="text-dark" href="#">HÀNG MỚI</a>
+              </div>
+            </div>
+            <div class="menu-group">
+              <div class="menu-group__label">
+                <a class="text-dark" href="#">SALE</a>
+              </div>
+            </div>
+            <div class="menu-group">
+              <div class="menu-group__label">
+                <a class="text-dark" href="#">TIN TỨC</a>
+              </div>
+            </div>
+            <div class="menu-group">
+              <div class="menu-group__label collapsed" data-bs-toggle="collapse" aria-expanded="false"
+                data-bs-target="#collapState" aria-controls="collapState">
+                <span>HỆ THỐNG CỬA HÀNG</span>
+                <span id="toggle-icon">+</span>
+              </div>
+              <div class="collapse" id="collapState">
+
+                <!-- Start wrap-state -->
+                <div class="wrap-state">
+                  <div class="wrap-state__province">
+                    <span>TP. HỒ CHÍ MINH</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 1</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 2</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 3</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 4</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 5</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 6</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End wrap-state -->
+
+                <div class="devider-full"></div>
+
+                <!-- Start wrap-state -->
+                <div class="wrap-state">
+                  <div class="wrap-state__province">
+                    <span>NGOẠI THÀNH</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 1</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 2</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address mb-3">
+                      <div class="wrap-state__district">Quận 3</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 4</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 5</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                    <div class="col-4 wrap-state__address">
+                      <div class="wrap-state__district">Quận 6</div>
+                      <div>142 Nguyễn Trãi</div>
+                      <div>283 Nguyễn Trãi</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Start wrap-state -->
+
+              </div>
+            </div>
+          </div>
+          <!-- End Menu Group -->
+
+          <div class="devider-full"></div>
+
+          <!-- Start Login Register Group -->
+          <div class="wrap-link">
+            <a href="#">ĐĂNG NHẬP</a>
+            <a href="#">ĐĂNG KÝ</a>
+          </div>
+          <!-- End Login Register Group -->
         </div>
-        <div class="header-info__item">
-          <i class="ion-bag"></i>
-          <span>Giỏ Hàng</span>
+
+        <div class="header-menu col d-none d-lg-block">
+          <ul>
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#">ÁO</a></li>
+            <li><a href="#">QUẦN</a></li>
+            <li><a href="#">ĐẦM</a></li>
+            <li><a href="#">CHÂN VÁY</a></li>
+            <li><a href="#">ÁO KHOÁC & ÁO VEST</a></li>
+            <li><a href="#">CHƯƠNG TRÌNH SALE</a></li>
+          </ul>
+        </div>
+        <div class="header-search col d-none d-xl-block">
+          <input class="input-search" placeholder="Bạn cần tìm gì?" />
+          <img src="./assets/images/search.png" class="icon-search"></img>
+        </div>
+        <div class="header-info col d-none d-xl-flex">
+          <div class="header-info__item">
+            <img src="./assets/images/home.png" class="icon-search-mobile" />
+            <span class="d-none d-xxl-block">Hệ Thống Cửa Hàng</span>
+          </div>
+          <div class="header-info__item">
+            <img src="./assets/images/account.png" class="icon-search-mobile" />
+            <span class="d-none d-xxl-block">Đăng Nhập/Đăng Ký</span>
+          </div>
+          <div class="header-info__item">
+            <div class="dropdown dropstart">
+              <div class="icon-cart" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./assets/images/cart.png" class="icon-search-mobile"></img>
+                <span class="quantity-item">0</span>
+              </div>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <div class="wrap-cart-view">
+                  <div class="cart-title">
+                    <h4>Giỏ Hàng</h4>
+                    <div>Bạn đang có 2 sản phẩm trong giỏ hàng</div>
+                  </div>
+                  <div class="cart-items">
+                    <div class="devider-dashed"></div>
+
+                    <div class="cart-item row justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img ">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                        </div>
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">Xoá</a></div>
+                        <div class="item">M/Hồng Nhạt</div>
+                        <div class="item money">Giá: 150.000đ</div>
+                        <!-- <button type="button">Xoá</button> -->
+                      </div>
+                    </div>
+
+                    <div class="devider-dashed"></div>
+
+                    <div class="cart-item row justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img ">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                        </div>
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">Xoá</a></div>
+                        <div class="item">M/Hồng Nhạt</div>
+                        <div class="item money">Giá: 150.000đ</div>
+                        <!-- <button type="button">Xoá</button> -->
+                      </div>
+                    </div>
+
+                    <div class="devider-dashed"></div>
+                  </div>
+
+                  <div class="total-money money d-flex justify-content-end">
+                    <div>Tổng:</div>
+                    <div class="cart-price">300.000 đ</div>
+                  </div>
+
+                  <!-- <a href="#" class="view-to-cart">
+                      <span class="cart-view-title">XEM GIỎ HÀNG</span>
+                      <img src="./assets/images/next.png" alt="next" />
+                    </a> -->
+                  <div class="text-center">
+                    <a href="#" class="cart-link cart-payment">THANH TOÀN GIỎ HÀNG</a>
+                    <a href="#" class="cart-link cart-continue">TIẾP TỤC MUA HÀNG</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="d-none d-xxl-block">Giỏ Hàng</span>
+          </div>
+        </div>
+        <div class="col-2 d-flex justify-content-end d-xl-none">
+          <div class="dropdown dropstart">
+            <div class="mr-4" id="dropdownMenuLinkSearch" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./assets/images/search.png" class="icon-search-mobile me-4"></img>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkSearch">
+              <div class="header-search px-2">
+                <input class="input-search" placeholder="Bạn cần tìm gì?" />
+                <img src="./assets/images/search.png" class="icon-search pl-2"></img>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropstart">
+            <div class="icon-cart" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./assets/images/cart.png" class="icon-search-mobile"></img>
+              <span class="quantity-item">0</span>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <div class="wrap-cart-view">
+                <div class="cart-title">
+                  <h4>Giỏ Hàng</h4>
+                  <div>Bạn đang có 2 sản phẩm trong giỏ hàng</div>
+                </div>
+                <div class="cart-items">
+                  <div class="devider-dashed"></div>
+
+                  <div class="cart-item row justify-content-between">
+                    <div class="col-auto">
+                      <div class="cart-item__img ">
+                        <img src="./assets/images/product1.webp" alt="test" />
+                      </div>
+                    </div>
+                    <div class="cart-item__info col">
+                      <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">Xoá</a></div>
+                      <div class="item">M/Hồng Nhạt</div>
+                      <div class="item money">Giá: 150.000đ</div>
+                      <!-- <button type="button">Xoá</button> -->
+                    </div>
+                  </div>
+
+                  <div class="devider-dashed"></div>
+
+                  <div class="cart-item row justify-content-between">
+                    <div class="col-auto">
+                      <div class="cart-item__img ">
+                        <img src="./assets/images/product1.webp" alt="test" />
+                      </div>
+                    </div>
+                    <div class="cart-item__info col">
+                      <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">Xoá</a></div>
+                      <div class="item">M/Hồng Nhạt</div>
+                      <div class="item money">Giá: 150.000đ</div>
+                      <!-- <button type="button">Xoá</button> -->
+                    </div>
+                  </div>
+
+                  <div class="devider-dashed"></div>
+                </div>
+
+                <div class="total-money money d-flex justify-content-end">
+                  <div>Tổng:</div>
+                  <div class="cart-price">300.000 đ</div>
+                </div>
+
+                <!-- <a href="#" class="view-to-cart">
+                    <span class="cart-view-title">XEM GIỎ HÀNG</span>
+                    <img src="./assets/images/next.png" alt="next" />
+                  </a> -->
+                <div class="text-center">
+                  <a href="#" class="cart-link cart-payment">THANH TOÀN GIỎ HÀNG</a>
+                  <a href="#" class="cart-link cart-continue">TIẾP TỤC MUA HÀNG</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-    <div class="devider"></div>
-  </body>
+  </div>
+
+
+  <!-- Devider -->
+  <div class="devider text-white mb-2">
+    Những câu content hay theo mùa hoặc theo chương trình của shop (từ 3 - 4
+    câu)
+  </div>
+
+  <div class="container">
+    <!-- Slides -->
+
+    <div class="wrap-slide">
+      <div class="slides">
+        <div class="image">
+          <img src="./assets/images/slide-1.webp" alt="slide-1" />
+        </div>
+        <div class="image">
+          <img src="./assets/images/slide-2.webp" alt="slide-1" />
+        </div>
+        <div class="image">
+          <img src="./assets/images/slide-3.webp" alt="slide-1" />
+        </div>
+        <div class="image">
+          <img src="./assets/images/slide-4.webp" alt="slide-1" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Section label -->
+    <!-- <div class="section-title">
+        <span class="title-collection text-red">TẾT COLLECTION (THEO MÙA)</span>
+      </div> -->
+
+    <div class="section-news row gap-auto justify-content-between">
+      <div class="banner-news col-12 col-md-6 mt-4">
+        <a href="#" class="banner-images">
+          <img src="./assets/images/slide-4.webp" class="border-rounded" alt="news" />
+        </a>
+      </div>
+      <div class="banner-news col-12 col-md-6 mt-4">
+        <a href="#" class="banner-images">
+          <img src="./assets/images/slide-4.webp" class="border-rounded" alt="news" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Section label -->
+    <div class="section-title">SẢN PHẨM MỚI</div>
+
+    <div class="product row">
+      <div class="slide-preview col-3 d-none d-xl-block">
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+      </div>
+      <div class="product-slides col-12 col-xl-9">
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">THÊM GIỎ HÀNG</span>
+              <span class="detail-btn btn-left-detail">Thông tin chi tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <span>SẢN PHẨM BÁN CHẠY</span>
+    </div>
+
+    <div class="product row">
+      <div class="slide-preview col-3 d-none d-xl-block">
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+        <div>
+          <div class="product__preview">
+            <img src="./assets/images/bg_product_1.webp" class="" alt="slide-1" />
+          </div>
+        </div>
+      </div>
+      <div class="product-slides col-12 col-xl-9">
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+        <div class="product-item">
+          <a href="#" class="product-item__image">
+            <img src="./assets/images/product1.webp" alt="slide-1" />
+            <div class="product-btn">
+              <span class="detail-btn add-cart">Thêm Vào Giỏ Hàng</span>
+              <span class="detail-btn btn-left-detail">Thông Tin Chi Tiết</span>
+            </div>
+          </a>
+          <div class="product-item__color">
+            <label class="color-picker c-orange">
+              <input type="radio" name="color" value="orange" checked="checked" />
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-amber">
+              <input type="radio" name="color" value="amber">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-lime">
+              <input type="radio" name="color" value="lime">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-teal">
+              <input type="radio" name="color" value="teal">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-blue">
+              <input type="radio" name="color" value="blue">
+              <div class="fake-radio"></div>
+            </label>
+            <label class="color-picker c-indigo">
+              <input type="radio" name="color" value="indigo">
+              <div class="fake-radio"></div>
+            </label>
+          </div>
+          <div class="product-item__name">Quần dài áo rộng tay ngắn ZZ</div>
+          <div class="product-item__price-sell">100.000 vnđ <span class="promotion">-30%</span></div>
+          <div class="product-item__price">600.000 vnđ</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section-title">
+      <span>TIN TỨC - SỰ KIỆN</span>
+    </div>
+
+    <div class="section-events row gap-auto justify-content-between mb-4">
+      <div class="banner-event col-12 col-xl-4 px-2">
+        <a href="#" class="banner-images">
+          <img src="./assets/images/news.webp" class="border-rounded" alt="news" />
+        </a>
+      </div>
+      <div class="banner-event col-12 col-xl-4 px-2">
+        <a href="#" class="banner-images">
+          <img src="./assets/images/news.webp" class="border-rounded" alt="news" />
+        </a>
+      </div>
+      <div class="banner-event col-12 col-xl-4 px-2">
+        <a href="#" class="banner-images">
+          <img src="./assets/images/news.webp" class="border-rounded" alt="news" />
+        </a>
+      </div>
+    </div>
+
+    <!-- News- Events -->
+
+    <!-- <div class="section-news">
+        <div class="banner-news">
+          <a href="#">
+            <img src="./assets/images/news.webp" alt="news" />
+          </a>
+        </div>
+        <div class="banner-news">
+          <a href="#">
+            <img src="./assets/images/news.webp" alt="news" />
+          </a>
+        </div>
+      </div> -->
+
+  </div>
+
+
+  <!-- Footer -->
+  <div class="footer ">
+    <div class="container">
+      <div class="row">
+        <div class="footer__column col-7 col-lg-4 mb-4 mb-xl-0">
+          <p>VM STYLE</p>
+          <ul class="list-items">
+            <li>
+              VM STYLE - Thương hiệu thời trang dành cho giới trẻ hàng đầu tại
+              Việt Nam
+            </li>
+            <li>Địa Chỉ: 126 Tân Sơn Nhì, Q. Tân Phú, TP. Hồ Chí Minh</li>
+            <li>Mua Hàng Online: 0938.528.068</li>
+            <li>CSKH: 0898.100.009</li>
+          </ul>
+        </div>
+        <div class="footer__column col-5 col-lg-2 mb-4 mb-xl-0">
+          <p>THƯƠNG HIỆU</p>
+          <ul class="list-items">
+            <li class="item-link">
+              <a href="#">Về Chúng Tôi </a>
+            </li>
+            <li class="item-link">
+              <a href="#">Tin Tức</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Tuyển Dụng</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Blog</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Hợp Tác</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column col-7 col-lg-2">
+          <p>HỖ TRỢ</p>
+          <ul class="list-items">
+            <li class="item-link">
+              <a href="#">Hỏi Đáp</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Hướng Dẫn Chọn Size</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Chính Sách Mua Hàng</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Chính Sách Vận Chuyển</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Chính Sách Thanh Toán</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Quy Định Đổi Trả</a>
+            </li>
+            <li class="item-link">
+              <a href="#">Tra Cứu Điểm Thẻ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__column col-5 col-lg-4">
+          <p>KẾT NỐI VỚI CHÚNG TÔI</p>
+          <div class="social-list mb-10">
+            <a href="#">
+              <img src="./assets/images/ig.jpeg" alt="fb" />
+            </a>
+            <a href="#">
+              <img src="./assets/images/ig.jpeg" alt="ig" />
+            </a>
+            <a href="#">
+              <img src="./assets/images/ig.jpeg" alt="yb" />
+            </a>
+          </div>
+          <p>SHOPPING</p>
+          <div class="social-list">
+            <a href="#">
+              <img src="./assets/images/ig.jpeg" alt="sp" />
+            </a>
+            <a href="#">
+              <img src="./assets/images/ig.jpeg" alt="laz" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyrighter -->
+
+  <div class="container">
+    <div class="copyright">
+      Bản quyền thuộc về VM Style. Cung cấp bởi VM Style
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/lib/slick.min.js"></script>
+  <script type="text/javascript" src="./assets/js/slides.js"></script>
+  <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

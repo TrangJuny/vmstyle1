@@ -1,0 +1,14 @@
+.section-title {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  &.primary-under {
+    color: $primary-color;
+    font-size: 34px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+  }
+}
