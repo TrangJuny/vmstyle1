@@ -144,35 +144,6 @@
             color: black;
           }
         }
-
-        .wrap-state {
-          padding: 20px 0px;
-
-          &__province {
-            text-align: center;
-            margin-bottom: 14px;
-
-            span {
-              padding: 4px 20px;
-              background-color: #c22026;
-              color: #fff;
-              font-size: 16px;
-              border-radius: 20px;
-            }
-          }
-
-          &__address {
-            font-size: 12px;
-            padding: 0;
-          }
-
-          &__district {
-            color: #c22026;
-            font-size: 15px;
-            text-align: center;
-            margin-bottom: 4px;
-          }
-        }
       }
     }
 
@@ -189,6 +160,70 @@
 
   .devider-full {
     border-top: 1px solid black;
+  }
+}
+
+.wrap-state {
+  padding: 20px 0px;
+
+  &__province {
+    text-align: center;
+    margin-bottom: 14px;
+
+    span {
+      padding: 4px 20px;
+      background-color: #c22026;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+  }
+
+  &__address {
+    font-size: 12px;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__district {
+    color: #c22026;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  &.bigger {
+    // padding: 0;
+    // max-width: 600px;
+    .wrap-state__address {
+      font-size: 14px;
+    }
+
+    .wrap-state__district {
+      font-size: 18px;
+    }
+    .wrap-state__province {
+      margin-bottom: 40px;
+      position: relative;
+      span {
+        padding: 0px 25px;
+        font-size: 18px;
+        display: inline-block;
+
+        position: relative;
+        &:before {
+          content: "";
+          width: 140%;
+          height: 5px;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: $primary-color;
+          z-index: -1;
+          transform: translateX(-50%);
+        }
+      }
+    }
   }
 }
 

@@ -7861,7 +7861,12 @@ textarea.form-control-lg {
 
 .nav-tab-primary .nav-pills .nav-link.active,
 .nav-tab-primary .nav-pills .show > .nav-link {
-  background: #c12227; }
+  background: #c12227;
+  color: #fff; }
+
+.nav-tab-primary .nav-link {
+  text-align: center;
+  flex: 1; }
 
 .breadcrumb-primary .breadcrumb-item {
   color: #fff;
@@ -7929,6 +7934,28 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
   h2.sesion-title-line-through span, .sesion-title-line-through.h2 span {
     padding: 10px;
     background: #fff; }
+
+.stores {
+  border: 8px solid #ffcb00;
+  border-radius: 7px;
+  padding: 20px 10px; }
+  .stores .line-primary {
+    border-width: 0;
+    border-left-width: 2px;
+    border-left-color: #c12227;
+    border-style: solid; }
+  @media (max-width: 768px) {
+    .stores .line-primary {
+      border-left: 0;
+      border-top-width: 1px;
+      border-top-color: #c12227; } }
+  .stores .blue-style .wrap-state.bigger .wrap-state__province span {
+    background: #65c6cf;
+    color: #000; }
+    .stores .blue-style .wrap-state.bigger .wrap-state__province span:before {
+      background: #65c6cf; }
+  .stores .blue-style .wrap-state__district {
+    color: #173266; }
 
 .header {
   background-color: #fff; }
@@ -8028,25 +8055,6 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
           .header .menu-sidebar .wrap-menu-group .menu-group .collapse-wrap-menu a {
             padding: 5px 30px;
             color: black; }
-        .header .menu-sidebar .wrap-menu-group .menu-group .wrap-state {
-          padding: 20px 0px; }
-          .header .menu-sidebar .wrap-menu-group .menu-group .wrap-state__province {
-            text-align: center;
-            margin-bottom: 14px; }
-            .header .menu-sidebar .wrap-menu-group .menu-group .wrap-state__province span {
-              padding: 4px 20px;
-              background-color: #c22026;
-              color: #fff;
-              font-size: 16px;
-              border-radius: 20px; }
-          .header .menu-sidebar .wrap-menu-group .menu-group .wrap-state__address {
-            font-size: 12px;
-            padding: 0; }
-          .header .menu-sidebar .wrap-menu-group .menu-group .wrap-state__district {
-            color: #c22026;
-            font-size: 15px;
-            text-align: center;
-            margin-bottom: 4px; }
     .header .menu-sidebar .wrap-link {
       display: flex;
       justify-content: space-between;
@@ -8055,6 +8063,50 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
         color: black; }
   .header .devider-full {
     border-top: 1px solid black; }
+
+.wrap-state {
+  padding: 20px 0px; }
+  .wrap-state__province {
+    text-align: center;
+    margin-bottom: 14px; }
+    .wrap-state__province span {
+      padding: 4px 20px;
+      background-color: #c22026;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 20px; }
+  .wrap-state__address {
+    font-size: 12px;
+    padding: 0;
+    text-align: center; }
+  .wrap-state__district {
+    color: #c22026;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 4px; }
+  .wrap-state.bigger .wrap-state__address {
+    font-size: 14px; }
+  .wrap-state.bigger .wrap-state__district {
+    font-size: 18px; }
+  .wrap-state.bigger .wrap-state__province {
+    margin-bottom: 40px;
+    position: relative; }
+    .wrap-state.bigger .wrap-state__province span {
+      padding: 0px 25px;
+      font-size: 18px;
+      display: inline-block;
+      position: relative; }
+      .wrap-state.bigger .wrap-state__province span:before {
+        content: "";
+        width: 140%;
+        height: 5px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: #c12227;
+        z-index: -1;
+        transform: translateX(-50%); }
 
 .wrap-content {
   padding: 0 10px; }
@@ -8198,14 +8250,12 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
 
 .product-slides .slick-next,
 .product-slides .slick-prev {
-  height: 300px;
-  top: 0%;
-  margin-top: 0; }
+  margin-top: -50px; }
   .product-slides .slick-next::before,
   .product-slides .slick-prev::before {
     font-family: "Ionicons";
     background-color: transparent;
-    font-size: 25px;
+    font-size: 35px;
     color: #282828; }
 
 .product-slides .slick-next {
@@ -8227,8 +8277,9 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
   .product-item__image {
     position: relative;
     width: 100%;
-    padding-top: 137.5%;
-    display: block; }
+    padding-top: calc(137.5%);
+    display: block;
+    max-height: 600px; }
     .product-item__image img {
       position: absolute;
       width: 100%;
@@ -8444,6 +8495,12 @@ h2.sesion-title-line-through, .sesion-title-line-through.h2 {
 
 .max-w-200 {
   max-width: 200px; }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 body {
   margin: 0 auto !important;

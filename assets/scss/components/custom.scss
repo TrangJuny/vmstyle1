@@ -33,6 +33,14 @@
   .nav-pills .nav-link.active,
   .nav-pills .show > .nav-link {
     background: $primary-color;
+    color: #fff;
+  }
+  .nav-link.active {
+  }
+
+  .nav-link {
+    text-align: center;
+    flex: 1;
   }
 }
 // breadcrumb
@@ -127,5 +135,40 @@ h2.sesion-title-line-through {
   span {
     padding: 10px;
     background: #fff;
+  }
+}
+
+.stores {
+  border: 8px solid #ffcb00;
+  border-radius: 7px;
+  padding: 20px 10px;
+
+  .line-primary {
+    border-width: 0;
+    border-left-width: 2px;
+    border-left-color: $primary-color;
+    border-style: solid;
+  }
+
+  @media (max-width: 768px) {
+    .line-primary {
+      border-left: 0;
+      border-top-width: 1px;
+      border-top-color: $primary-color;
+    }
+  }
+
+  .blue-style {
+    .wrap-state.bigger .wrap-state__province span {
+      background: #65c6cf;
+      color: #000;
+      &:before {
+        background: #65c6cf;
+      }
+    }
+
+    .wrap-state__district {
+      color: #173266;
+    }
   }
 }

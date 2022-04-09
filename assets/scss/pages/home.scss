@@ -43,14 +43,14 @@
 .product-slides {
   .slick-next,
   .slick-prev {
-    height: 300px;
-    top: 0%;
-    margin-top: 0;
+    // height: 300px;
+    // top: 0%;
+    margin-top: -50px;
 
     &::before {
       font-family: "Ionicons";
       background-color: transparent;
-      font-size: 25px;
+      font-size: 35px;
       color: #282828;
     }
   }
@@ -77,12 +77,16 @@
   display: flex;
   flex-direction: column;
   padding: 0 10px;
+  $perent: 440 / 320 * 100%;
+  $perentxx: $perent - 500;
 
   &__image {
     position: relative;
     width: 100%;
-    padding-top: 440px / 320px * 100%;
+    padding-top: calc(#{$perent} );
     display: block;
+
+    max-height: 600px;
 
     img {
       position: absolute;
