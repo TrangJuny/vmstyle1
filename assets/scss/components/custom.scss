@@ -115,7 +115,7 @@
   min-height: 200px;
 }
 
-h2.sesion-title-line-through {
+.sesion-title-line-through {
   text-align: center;
   position: relative;
   margin: 0;
@@ -129,12 +129,15 @@ h2.sesion-title-line-through {
     top: 50%;
     left: 0;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
   }
-
-  span {
+  &.line-black:before {
+    background: #333;
+  }
+  > * {
     padding: 10px;
     background: #fff;
+    z-index: 1;
   }
 }
 

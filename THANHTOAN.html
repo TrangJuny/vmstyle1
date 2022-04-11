@@ -1,132 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Lib -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
-    <link rel="stylesheet" href="./assets/css/slick.theme.css" />
-    <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Thanh Toán</title>
+  <!-- Lib -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+  <link rel="stylesheet" href="./assets/css/slick.theme.css" />
+  <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
 
-    <!-- Reset -->
-    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- Main css -->
+  <title>Thanh Toán</title>
 
-    <link href="./assets/css/main.css" rel="stylesheet" />
+  <!-- Reset -->
+  <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- Main css -->
 
-    <!-- Font Roboto Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+  <link href="./assets/css/main.css" rel="stylesheet" />
 
-  <body>
+  <!-- Font Roboto Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrap-logo-payment">
+      <img class="logo-custom" src="./assets/images/logo.png" />
+    </div>
+
     <div class="container">
-      <div class="wrap-logo-payment">
-        <img class="logo-custom" src="./assets/images/logo.png" />
+      <div class="devider-solid"></div>
+      <div class="text-16 d-block d-md-none fw-500 mt-3 mb-3 text-20">THANH TOÁN</div>
+      <div class="payment-login text-14 mb-3  d-block d-md-none">
+        <a class="text-red" href="#">Đăng nhập</a> để tích điểm
       </div>
-
-      <div class="container">
-        <div class="devider-solid"></div>
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="wrap-payment-page">
-              <div class="text-16 fw-500 mb-3">THANH TOÁN</div>
-              <div class="payment-login text-14 mb-3">
-                <a class="text-red" href="#">Đăng nhập</a> để tích điểm
-              </div>
-              <div class="text-14 fw-500">Thông tin nhận hàng</div>
-              <div class="form-order">
-                <input class="input-form mt-3" placeholder="Họ và tên" />
-                <input class="input-form mt-3" placeholder="Số điện thoại" />
-                <div class="row g-2 mt-3">
-                  <div class="col-12 col-sm-4">
-                    <select
-                      placeholder="hello"
-                      class="form-select select-custom"
-                      id="city"
-                    >
-                      <option class="disabled" value="" disabled selected>
-                        Tỉnh/Thành Phố
-                      </option>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-sm-4">
-                    <select
-                      placeholder="hello"
-                      class="form-select select-custom"
-                      id="distric"
-                    >
-                      <option class="disabled" value="" disabled selected>
-                        Quận
-                      </option>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-sm-4">
-                    <select
-                      placeholder="hello"
-                      class="form-select select-custom"
-                      id="wards"
-                    >
-                      <option class="disabled" value="" disabled selected>
-                        Phường/Xã
-                      </option>
-                      <option value="volvo">Volvo</option>
-                      <option value="saab">Saab</option>
-                      <option value="mercedes">Mercedes</option>
-                      <option value="audi">Audi</option>
-                    </select>
-                  </div>
+      <div class="row  g-0 wrap-payment-container">
+        <div class="col-12 col-md-6">
+          <div class="wrap-payment-page ps-0 wrap-payment-page-left">
+            <div class="text-16 d-none d-md-block fw-500 mb-3  text-18">THANH TOÁN</div>
+            <div class="payment-login text-14 mb-3  d-none d-md-block">
+              <a class="text-red" href="#">Đăng nhập</a> để tích điểm
+            </div>
+            <div class="text-14 fw-500">Thông tin nhận hàng</div>
+            <div class="form-order">
+              <input class="input-form mt-3" placeholder="Họ và tên" />
+              <input class="input-form mt-3" placeholder="Số điện thoại" />
+              <div class="row g-2 mt-3">
+                <div class="col-12 col-sm-4">
+                  <select placeholder="hello" class="form-select select-custom" id="city">
+                    <option class="disabled" value="" disabled selected>
+                      Tỉnh/Thành Phố
+                    </option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
                 </div>
-                <input class="input-form mt-3" placeholder="Nhập địa chỉ" />
-                <textarea
-                  class="input-form mt-3 input-area"
-                  rows="4"
-                  cols="50"
-                  placeholder="Ghi chú đơn hàng"
-                ></textarea>
+                <div class="col-12 col-sm-4">
+                  <select placeholder="hello" class="form-select select-custom" id="distric">
+                    <option class="disabled" value="" disabled selected>
+                      Quận
+                    </option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-4">
+                  <select placeholder="hello" class="form-select select-custom" id="wards">
+                    <option class="disabled" value="" disabled selected>
+                      Phường/Xã
+                    </option>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
               </div>
-              <div class="devider-solid my-4"></div>
-              <div class="text-16 fw-500 mb-3">PHƯƠNG THỨC THANH TOÁN</div>
-              <div class="radio-group">
-                <label class="form-check-label text-14" for="payment-cod"
-                  >Thanh toán khi nhận hàng (COD)</label
-                >
-                <input
-                  class="form-check-input"
-                  checked
-                  type="radio"
-                  name="payment"
-                  id="payment-cod"
-                />
-              </div>
-              <div class="radio-group mt-3">
-                <label class="form-check-label text-14" for="payment-bank"
-                  >Chuyển khoản qua ngân hàng</label
-                >
-                <input
-                  class="form-check-input"
-                  name="payment"
-                  type="radio"
-                  id="payment-bank"
-                />
-              </div>
-              <!-- <div class="radio-group">
+              <input class="input-form mt-3" placeholder="Nhập địa chỉ" />
+              <textarea class="input-form mt-3 input-area" rows="4" cols="50" placeholder="Ghi chú đơn hàng"></textarea>
+            </div>
+            <div class="devider-solid my-4"></div>
+            <div class="text-16 fw-500 mb-3">PHƯƠNG THỨC THANH TOÁN</div>
+            <div class="radio-group">
+              <label class="form-check-label text-14" for="payment-cod">Thanh toán khi nhận hàng (COD)</label>
+              <input class="form-check-input" checked type="radio" name="payment" id="payment-cod" />
+            </div>
+            <div class="radio-group mt-3">
+              <label class="form-check-label text-14" for="payment-bank">Chuyển khoản qua ngân hàng</label>
+              <input class="form-check-input" name="payment" type="radio" id="payment-bank" />
+            </div>
+            <!-- <div class="radio-group">
               <label for="payment-cod">Thanh toán khi nhận hàng (COD)</label>
               <input checked type="radio" id="payment-cod" />
             </div>
@@ -134,181 +104,155 @@
               <label for="payment-bank">Chuyển khoản qua ngân hàng</label>
               <input type="radio" id="payment-bank" />
             </div> -->
-              <button
-                type="button"
-                class="btn-around w-full bg-color-primary text-22 text-white"
-              >
-                ĐẶT HÀNG
-              </button>
-            </div>
+            <button type="button" class="btn-around w-full bg-color-primary text-22 text-white">
+              ĐẶT HÀNG
+            </button>
           </div>
-          <div class="col-12 col-md-6">
-            <div class="wrap-payment-page bg-color-gray h-full">
-              <div class="wrap-cart-content p-0">
-                <div class="text-16 fw-500 mb-3">
-                  Thông tin đơn hàng (4 sản phẩm)
-                </div>
-                <div class="row">
-                  <div class="col text-14 fw-500">Sản phẩm</div>
-                  <div class="col-2 text-14 fw-500 text-center">Giá tiền</div>
-                  <div class="col-3 text-14 fw-500 text-center">Tổng tiền</div>
-                </div>
-                <div class="row g-0 mt-3">
-                  <div class="devider-solid"></div>
-                </div>
-                <div class="row pt-4">
-                  <div class="col">
-                    <div class="cart-items">
-                      <div class="cart-item p-0 row justify-content-between">
-                        <div class="col-auto">
-                          <div class="cart-item__img item-img-cart">
-                            <img
-                              src="./assets/images/product1.webp"
-                              alt="test"
-                            />
-                            <span class="quantity-small">1</span>
-                          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="wrap-payment-page bg-color-gray h-full ">
+            <div class="wrap-cart-content p-0">
+              <div class="text-16 fw-500 mb-3">
+                Thông tin đơn hàng (4 sản phẩm)
+              </div>
+              <div class="row">
+                <div class="col text-14 fw-500">Sản phẩm</div>
+                <div class="col-3 text-14 fw-500 text-center">Giá tiền</div>
+                <div class="col-3 text-14 fw-500 text-center">Tổng tiền</div>
+              </div>
+              <div class="row g-0 mt-3">
+                <div class="devider-solid"></div>
+              </div>
+              <div class="row pt-4 g-3">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row g-3  g-md-2  g-lg-3 justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                          <span class="quantity-small">1</span>
                         </div>
-                        <div class="cart-item__info col">
-                          <div class="item cart-title-product">
-                            Sản phẩm số một + test độ dài tên của một sản phẩm
-                          </div>
-                          <div class="item">M/Hồng Nhạt</div>
-                          <div class="item money">FREESIZE</div>
-                          <!-- <button type="button">Xoá</button> -->
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số một + test độ dài tên của một sản phẩm
                         </div>
+                        <div class="item  text-12">M/Hồng Nhạt</div>
+                        <div class="item money">FREESIZE</div>
+                        <!-- <button type="button">Xoá</button> -->
                       </div>
                     </div>
                   </div>
-                  <div class="col-2 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
-                  <div class="col-3 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
                 </div>
-                <div class="row pt-4">
-                  <div class="col">
-                    <div class="cart-items">
-                      <div class="cart-item p-0 row justify-content-between">
-                        <div class="col-auto">
-                          <div class="cart-item__img item-img-cart">
-                            <img
-                              src="./assets/images/product1.webp"
-                              alt="test"
-                            />
-                            <span class="quantity-small">1</span>
-                          </div>
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+              </div>
+              <div class="row pt-4 g-3">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row g-3  g-md-2  g-lg-3 justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                          <span class="quantity-small">1</span>
                         </div>
-                        <div class="cart-item__info col">
-                          <div class="item cart-title-product">
-                            Sản phẩm số một + test độ dài tên của một sản phẩm
-                          </div>
-                          <div class="item">M/Hồng Nhạt</div>
-                          <div class="item money">FREESIZE</div>
-                          <!-- <button type="button">Xoá</button> -->
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số một + test độ dài tên của một sản phẩm
                         </div>
+                        <div class="item  text-12">M/Hồng Nhạt</div>
+                        <div class="item money">FREESIZE</div>
+                        <!-- <button type="button">Xoá</button> -->
                       </div>
                     </div>
                   </div>
-                  <div class="col-2 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
-                  <div class="col-3 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
                 </div>
-                <div class="row pt-4">
-                  <div class="col">
-                    <div class="cart-items">
-                      <div class="cart-item p-0 row justify-content-between">
-                        <div class="col-auto">
-                          <div class="cart-item__img item-img-cart">
-                            <img
-                              src="./assets/images/product1.webp"
-                              alt="test"
-                            />
-                            <span class="quantity-small">1</span>
-                          </div>
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+              </div>
+              <div class="row pt-4 g-3">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row g-3  g-md-2  g-lg-3 justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                          <span class="quantity-small">1</span>
                         </div>
-                        <div class="cart-item__info col">
-                          <div class="item cart-title-product">
-                            Sản phẩm số một + test độ dài tên của một sản phẩm
-                          </div>
-                          <div class="item">M/Hồng Nhạt</div>
-                          <div class="item money">FREESIZE</div>
-                          <!-- <button type="button">Xoá</button> -->
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số một + test độ dài tên của một sản phẩm
                         </div>
+                        <div class="item  text-12">M/Hồng Nhạt</div>
+                        <div class="item money">FREESIZE</div>
+                        <!-- <button type="button">Xoá</button> -->
                       </div>
                     </div>
                   </div>
-                  <div class="col-2 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
-                  <div class="col-3 text-center text-12">
-                    <b>185.000</b> vnđ
-                  </div>
                 </div>
-                <div class="devider-solid pt-4"></div>
-                <div class="form-voucher">
-                  <input
-                    class="input-form col"
-                    placeholder="Nhập mã giảm giá"
-                  />
-                  <button type="button" class="btn-around col-auto">
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="col-3 text-center text-12">
+                  <b>185.000</b> vnđ
+                </div>
+              </div>
+              <div class="devider-solid pt-4"></div>
+              <div class="form-voucher row gap-2">
+                <input class="input-form col" placeholder="Nhập mã giảm giá" />
+                <div class="col-auto">
+                  <button type="button" class="btn-around ms-0">
                     Áp dụng
                   </button>
                 </div>
-                <div class="devider-solid"></div>
-                <div class="text-18 fw-300 mt-3 d-flex justify-content-between">
-                  <span>Tạm tính:</span>
-                  <span>568.000 vnđ</span>
-                </div>
-                <div class="text-18 fw-300 mt-1 d-flex justify-content-between">
-                  <span>Phí vận chuyển:</span>
-                  <span>20.000 vnđ</span>
-                </div>
-                <div class="devider-solid mt-3"></div>
-                <div
-                  class="text-20 my-3 d-flex justify-content-between align-items-center"
-                >
-                  <span class="text-18">Tổng tiền thanh toán:</span>
-                  <span><b class="text-30 fw-600">588.000 vnđ</b></span>
-                </div>
-                <a href="#">
-                  <img
-                    class="btn-back"
-                    src="./assets/images/back.png"
-                    alt="next"
-                  />
-                  <span class="text-dark text-18">Quay về giỏ hàng</span>
-                </a>
               </div>
-              <div class="payment-advise">
-                <a href="#" class="cart-link-info">CSHK: 0898.100.009</a>
-                <a href="#" class="cart-link-info">CHÍNH SÁCH VẬN CHUYỂN</a>
-                <a href="#" class="cart-link-info no-border"
-                  >QUY ĐỊNH ĐỔI TRẢ</a
-                >
+              <div class="devider-solid"></div>
+              <div class="text-18 fw-300 mt-3 d-flex justify-content-between">
+                <span>Tạm tính:</span>
+                <span>568.000 vnđ</span>
               </div>
+              <div class="text-18 fw-300 mt-1 d-flex justify-content-between">
+                <span>Phí vận chuyển:</span>
+                <span>20.000 vnđ</span>
+              </div>
+              <div class="devider-solid mt-3"></div>
+              <div class="text-20 my-3 d-flex justify-content-between align-items-center">
+                <span class="text-18">Tổng tiền thanh toán:</span>
+                <div class="text-end"><b class="text-30 fw-600">588.000 vnđ</b></div>
+              </div>
+              <a href="#">
+                <img class="btn-back" src="./assets/images/back.png" alt="next" />
+                <span class="text-dark text-16">Quay về giỏ hàng</span>
+              </a>
+            </div>
+            <div class="payment-advise  text-center">
+              <a href="#" class="cart-link-info ps-0">CSHK: 0898.100.009</a>
+              <a href="#" class="cart-link-info">CHÍNH SÁCH VẬN CHUYỂN</a>
+              <a href="#" class="cart-link-info no-border pe-0">QUY ĐỊNH ĐỔI TRẢ</a>
             </div>
           </div>
-          <div class="mt-5"></div>
         </div>
       </div>
     </div>
+    <div class="mt-5"></div>
+  </div>
 
-    <!-- Script -->
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-1.11.0.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script type="text/javascript" src="./assets/js/lib/slick.min.js"></script>
-    <script type="text/javascript" src="./assets/js/slides.js"></script>
-    <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Script -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/lib/slick.min.js"></script>
+  <script type="text/javascript" src="./assets/js/slides.js"></script>
+  <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

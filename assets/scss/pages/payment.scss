@@ -1,11 +1,12 @@
 .wrap-payment-page {
   display: flex;
   flex-direction: column;
-  padding: 40px 40px 0px 40px;
+  padding: 30px;
 
   .wrap-cart-content {
     .item-img-cart {
-      width: 70px;
+      // width: 70px;
+      min-width: 40px;
     }
     .cart-item__info .item {
       font-weight: 300;
@@ -14,7 +15,14 @@
     }
   }
 }
-
+@media (max-width: 768px) {
+  .wrap-payment-container {
+    flex-flow: column-reverse;
+  }
+  .wrap-payment-page-left {
+    padding: 30px 0px;
+  }
+}
 .wrap-logo-payment {
   padding: 20px 0;
 
@@ -63,7 +71,7 @@
   margin-top: 50px;
 
   .cart-link-info {
-    font-size: 12px;
+    font-size: 10px;
     margin: 0;
   }
 }
