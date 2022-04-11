@@ -1,281 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Lib -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
+    <link rel="stylesheet" href="./assets/css/slick.theme.css" />
+    <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
 
-  <!-- Lib -->
-  <link rel="stylesheet" type="text/css" href="./assets/css/slick.css" />
-  <link rel="stylesheet" href="./assets/css/slick.theme.css" />
-  <link href="./assets/css/ionicons.min.css" rel="stylesheet" />
+    <title>Giỏ Hàng</title>
 
+    <!-- Reset -->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- Main css -->
 
-  <title>Giỏ Hàng</title>
+    <link href="./assets/css/main.css" rel="stylesheet" />
 
-  <!-- Reset -->
-  <link href="./assets/css/bootstrap.css" rel="stylesheet" />
-  <!-- Main css -->
+    <!-- Font Roboto Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="./assets/css/main.css" rel="stylesheet" />
+  <body>
+    <div class="container">
+      <header class="header">
+        <div
+          class="row row-cols-auto d-flex justify-content-between align-items-center py-3 py-xxl-0"
+        >
+          <div class="header-logo col">
+            <img
+              data-bs-toggle="offcanvas"
+              data-bs-target="#toggleMenu"
+              src="./assets/images/menu.png"
+              class="icon-search-mobile me-3 me-lg-0 d-lg-none"
+            />
+            <img src="./assets/images/logo.png" />
+          </div>
 
-  <!-- Font Roboto Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="row row-cols-auto d-flex justify-content-between align-items-center py-3 py-xxl-0">
-        <div class="header-logo col">
-          <img data-bs-toggle="offcanvas" data-bs-target="#toggleMenu" src="./assets/images/menu.png"
-            class="icon-search-mobile me-3 me-lg-0 d-lg-none" />
-          <img src="./assets/images/logo.png" />
-        </div>
-
-        <div class="offcanvas offcanvas-start menu-sidebar" tabindex="-1" id="toggleMenu"
-          aria-labelledby="offcanvasWithBackdropLabel">
-          <!-- <div class="offcanvas-header">
+          <div
+            class="offcanvas offcanvas-start menu-sidebar"
+            tabindex="-1"
+            id="toggleMenu"
+            aria-labelledby="offcanvasWithBackdropLabel"
+          >
+            <!-- <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
             </div>
             <div class="offcanvas-body">
               <p>.....</p>
             </div> -->
 
-          <!-- Start Menu Group -->
-          <div class="wrap-menu-group">
-            <div class="menu-group">
-              <div class="menu-group__label collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                data-bs-target="#collapseProduct" aria-controls="collapseProduct">
-                <span>SẢN PHẨM</span>
-                <span id="toggle-icon">+</span>
-              </div>
-              <div class="collapse" id="collapseProduct">
-                <div class="collapse-wrap-menu">
-                  <a href="#">QUẦN</a>
-                  <a href="#">ÁO</a>
-                  <a href="#">ĐẦM</a>
-                  <a href="#">CHÂN VÁY</a>
-                  <a href="#">ÁO KHOÁC - VEST</a>
+            <!-- Start Menu Group -->
+            <div class="wrap-menu-group">
+              <div class="menu-group">
+                <div
+                  class="menu-group__label collapsed"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  data-bs-target="#collapseProduct"
+                  aria-controls="collapseProduct"
+                >
+                  <span>SẢN PHẨM</span>
+                  <span id="toggle-icon">+</span>
+                </div>
+                <div class="collapse" id="collapseProduct">
+                  <div class="collapse-wrap-menu">
+                    <a href="#">QUẦN</a>
+                    <a href="#">ÁO</a>
+                    <a href="#">ĐẦM</a>
+                    <a href="#">CHÂN VÁY</a>
+                    <a href="#">ÁO KHOÁC - VEST</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="menu-group">
-              <div class="menu-group__label">
-                <a class="text-dark" href="#">HÀNG MỚI</a>
-              </div>
-            </div>
-            <div class="menu-group">
-              <div class="menu-group__label">
-                <a class="text-dark" href="#">SALE</a>
-              </div>
-            </div>
-            <div class="menu-group">
-              <div class="menu-group__label">
-                <a class="text-dark" href="#">TIN TỨC</a>
-              </div>
-            </div>
-            <div class="menu-group">
-              <div class="menu-group__label collapsed" data-bs-toggle="collapse" aria-expanded="false"
-                data-bs-target="#collapState" aria-controls="collapState">
-                <span>HỆ THỐNG CỬA HÀNG</span>
-                <span id="toggle-icon">+</span>
-              </div>
-              <div class="collapse" id="collapState">
-
-                <!-- Start wrap-state -->
-                <div class="wrap-state">
-                  <div class="wrap-state__province">
-                    <span>TP. HỒ CHÍ MINH</span>
-                  </div>
-                  <div class="row">
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 1</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 2</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 3</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 4</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 5</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 6</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                  </div>
+              <div class="menu-group">
+                <div class="menu-group__label">
+                  <a class="text-dark" href="#">HÀNG MỚI</a>
                 </div>
-                <!-- End wrap-state -->
-
-                <div class="devider-full"></div>
-
-                <!-- Start wrap-state -->
-                <div class="wrap-state">
-                  <div class="wrap-state__province">
-                    <span>NGOẠI THÀNH</span>
-                  </div>
-                  <div class="row">
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 1</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 2</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address mb-3">
-                      <div class="wrap-state__district">Quận 3</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 4</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 5</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                    <div class="col-4 wrap-state__address">
-                      <div class="wrap-state__district">Quận 6</div>
-                      <div>142 Nguyễn Trãi</div>
-                      <div>283 Nguyễn Trãi</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Start wrap-state -->
-
               </div>
-            </div>
-          </div>
-          <!-- End Menu Group -->
-
-          <div class="devider-full"></div>
-
-          <!-- Start Login Register Group -->
-          <div class="wrap-link">
-            <a href="#">ĐĂNG NHẬP</a>
-            <a href="#">ĐĂNG KÝ</a>
-          </div>
-          <!-- End Login Register Group -->
-        </div>
-
-        <div class="header-menu col d-none d-lg-block">
-          <ul>
-            <li><a href="#">TRANG CHỦ</a></li>
-            <li><a href="#">ÁO</a></li>
-            <li><a href="#">QUẦN</a></li>
-            <li><a href="#">ĐẦM</a></li>
-            <li><a href="#">CHÂN VÁY</a></li>
-            <li><a href="#">ÁO KHOÁC & ÁO VEST</a></li>
-            <li><a href="#">CHƯƠNG TRÌNH SALE</a></li>
-          </ul>
-        </div>
-        <div class="header-search col d-none d-xl-block">
-          <input class="input-search" placeholder="Bạn cần tìm gì?" />
-          <img src="./assets/images/search.png" class="icon-search"/>
-        </div>
-        <div class="header-info col d-none d-xl-flex">
-          <div class="header-info__item">
-            <img src="./assets/images/home.png" class="icon-search-mobile" />
-            <span class="d-none d-xxl-block">Hệ Thống Cửa Hàng</span>
-          </div>
-          <div class="header-info__item">
-            <div class="wrap-login" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              <img src="./assets/images/account.png" class="icon-search-mobile" />
-              <span class="d-none d-xxl-block">Đăng Nhập/Đăng Ký</span>
-            </div>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="wrap-btn-close">
-                    <button type="button" class="btn-close close-around" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
-                        ĐĂNG NHẬP
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">
-                        ĐĂNG KÝ
-                      </button>
-                    </li>
-                  </ul>
-                  <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                      <div class="wrap-auth">
-                        <input class="input-auth" placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI" />
-                        <button class="btn-around bg-dark text-white">TIẾP TỤC</button>
-                        <div class="relative">
-                          <div class="fake-btn-around">
-                            HOẶC ĐĂNG NHẬP QUA
-                          </div>
-                          <div class="line-through"></div>
-                        </div>
-                        <div class="container">
-                          <div class="row col-auto mt-4">
-                            <div class="col">
-                              <a href="#">
-                                <img class="btn-login-social" src="./assets/images/fb-login.png" alt="fb-login" />
-                              </a>
-                            </div>
-                            <div class="col">
-                              <a href="#">
-                                <img class="btn-login-social" src="./assets/images/gg-login.png" alt="gg-login" />
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <a href="#" class="btn-around btn-back">QUAY VỀ TRANG CHỦ</a>
+              <div class="menu-group">
+                <div class="menu-group__label">
+                  <a class="text-dark" href="#">SALE</a>
+                </div>
+              </div>
+              <div class="menu-group">
+                <div class="menu-group__label">
+                  <a class="text-dark" href="#">TIN TỨC</a>
+                </div>
+              </div>
+              <div class="menu-group">
+                <div
+                  class="menu-group__label collapsed"
+                  data-bs-toggle="collapse"
+                  aria-expanded="false"
+                  data-bs-target="#collapState"
+                  aria-controls="collapState"
+                >
+                  <span>HỆ THỐNG CỬA HÀNG</span>
+                  <span id="toggle-icon">+</span>
+                </div>
+                <div class="collapse" id="collapState">
+                  <!-- Start wrap-state -->
+                  <div class="wrap-state">
+                    <div class="wrap-state__province">
+                      <span>TP. HỒ CHÍ MINH</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 1</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
                       </div>
-                    </div>
-                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                      <div class="wrap-auth">
-                        <input class="input-auth" placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI" />
-                        <input class="input-auth mt-4" placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI" />
-                        <button class="btn-around bg-dark text-white">TIẾP TỤC</button>
-                        <a href="#" class="fake-btn-around btn-back">ĐĂNG NHẬP</a>
-                        <a href="#" class="fake-btn-around btn-back mt-3">QUAY VỀ TRANG CHỦ</a>
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 2</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 3</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 4</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 5</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 6</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
                       </div>
                     </div>
                   </div>
+                  <!-- End wrap-state -->
+
+                  <div class="devider-full"></div>
+
+                  <!-- Start wrap-state -->
+                  <div class="wrap-state">
+                    <div class="wrap-state__province">
+                      <span>NGOẠI THÀNH</span>
+                    </div>
+                    <div class="row">
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 1</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 2</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address mb-3">
+                        <div class="wrap-state__district">Quận 3</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 4</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 5</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                      <div class="col-4 wrap-state__address">
+                        <div class="wrap-state__district">Quận 6</div>
+                        <div>142 Nguyễn Trãi</div>
+                        <div>283 Nguyễn Trãi</div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Start wrap-state -->
                 </div>
               </div>
             </div>
-            
+            <!-- End Menu Group -->
+
+            <div class="devider-full"></div>
+
+            <!-- Start Login Register Group -->
+            <div class="wrap-link">
+              <a href="#">ĐĂNG NHẬP</a>
+              <a href="#">ĐĂNG KÝ</a>
+            </div>
+            <!-- End Login Register Group -->
           </div>
-          <div class="header-info__item">
+
+          <div class="header-menu col d-none d-lg-block">
+            <ul>
+              <li><a href="#">TRANG CHỦ</a></li>
+              <li><a href="#">ÁO</a></li>
+              <li><a href="#">QUẦN</a></li>
+              <li><a href="#">ĐẦM</a></li>
+              <li><a href="#">CHÂN VÁY</a></li>
+              <li><a href="#">ÁO KHOÁC & ÁO VEST</a></li>
+              <li><a href="#">CHƯƠNG TRÌNH SALE</a></li>
+            </ul>
+          </div>
+          <div class="header-search col d-none d-xl-block">
+            <input class="input-search" placeholder="Bạn cần tìm gì?" />
+            <img src="./assets/images/search.png" class="icon-search" />
+          </div>
+          <div class="header-info col d-none d-xl-flex">
+            <div class="header-info__item">
+              <img src="./assets/images/home.png" class="icon-search-mobile" />
+              <span class="d-none d-xxl-block">Hệ Thống Cửa Hàng</span>
+            </div>
+            <div class="header-info__item">
+              <div
+                class="wrap-login"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                <img
+                  src="./assets/images/account.png"
+                  class="icon-search-mobile"
+                />
+                <span class="d-none d-xxl-block">Đăng Nhập/Đăng Ký</span>
+              </div>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="staticBackdrop"
+                data-bs-backdrop="static"
+                data-bs-keyboard="false"
+                tabindex="-1"
+                aria-labelledby="staticBackdropLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="wrap-btn-close">
+                      <button
+                        type="button"
+                        class="btn-close close-around"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link active"
+                          id="login-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#login"
+                          type="button"
+                          role="tab"
+                          aria-controls="login"
+                          aria-selected="true"
+                        >
+                          ĐĂNG NHẬP
+                        </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button
+                          class="nav-link"
+                          id="register-tab"
+                          data-bs-toggle="tab"
+                          data-bs-target="#register"
+                          type="button"
+                          role="tab"
+                          aria-controls="register"
+                          aria-selected="false"
+                        >
+                          ĐĂNG KÝ
+                        </button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                      <div
+                        class="tab-pane fade show active"
+                        id="login"
+                        role="tabpanel"
+                        aria-labelledby="login-tab"
+                      >
+                        <div class="wrap-auth">
+                          <input
+                            class="input-auth"
+                            placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI"
+                          />
+                          <button class="btn-around bg-dark text-white">
+                            TIẾP TỤC
+                          </button>
+                          <div class="relative">
+                            <div class="fake-btn-around">
+                              HOẶC ĐĂNG NHẬP QUA
+                            </div>
+                            <div class="line-through"></div>
+                          </div>
+                          <div class="container">
+                            <div class="row col-auto mt-4">
+                              <div class="col">
+                                <a href="#">
+                                  <img
+                                    class="btn-login-social"
+                                    src="./assets/images/fb-login.png"
+                                    alt="fb-login"
+                                  />
+                                </a>
+                              </div>
+                              <div class="col">
+                                <a href="#">
+                                  <img
+                                    class="btn-login-social"
+                                    src="./assets/images/gg-login.png"
+                                    alt="gg-login"
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <a href="#" class="btn-around btn-back"
+                            >QUAY VỀ TRANG CHỦ</a
+                          >
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="register"
+                        role="tabpanel"
+                        aria-labelledby="register-tab"
+                      >
+                        <div class="wrap-auth">
+                          <input
+                            class="input-auth"
+                            placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI"
+                          />
+                          <input
+                            class="input-auth mt-4"
+                            placeholder="VUI LÒNG NHẬP SỐ ĐIỆN THOẠI"
+                          />
+                          <button class="btn-around bg-dark text-white">
+                            TIẾP TỤC
+                          </button>
+                          <a href="#" class="fake-btn-around btn-back"
+                            >ĐĂNG NHẬP</a
+                          >
+                          <a href="#" class="fake-btn-around btn-back mt-3"
+                            >QUAY VỀ TRANG CHỦ</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-info__item">
+              <div class="dropdown dropstart">
+                <div
+                  class="icon-cart"
+                  id="dropdownMenuLink"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./assets/images/cart.png"
+                    class="icon-search-mobile"
+                  />
+                  <span class="quantity-item">0</span>
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <div class="wrap-cart-view">
+                    <div class="cart-title">
+                      <h4>Giỏ Hàng</h4>
+                      <div>Bạn đang có 2 sản phẩm trong giỏ hàng</div>
+                    </div>
+                    <div class="cart-items">
+                      <div class="devider-dashed"></div>
+
+                      <div class="cart-item row justify-content-between">
+                        <div class="col-auto">
+                          <div class="cart-item__img">
+                            <img
+                              src="./assets/images/product1.webp"
+                              alt="test"
+                            />
+                          </div>
+                        </div>
+                        <div class="cart-item__info col">
+                          <div class="item">
+                            Sản phẩm số 1
+                            <a class="delete-item" href="#">XÓA</a>
+                          </div>
+                          <div class="item">M/Hồng Nhạt</div>
+                          <div class="item money">Giá: 150.000đ</div>
+                        </div>
+                      </div>
+
+                      <div class="devider-dashed"></div>
+
+                      <div class="cart-item row justify-content-between">
+                        <div class="col-auto">
+                          <div class="cart-item__img">
+                            <img
+                              src="./assets/images/product1.webp"
+                              alt="test"
+                            />
+                          </div>
+                        </div>
+                        <div class="cart-item__info col">
+                          <div class="item">
+                            Sản phẩm số 1
+                            <a class="delete-item" href="#">XÓA</a>
+                          </div>
+                          <div class="item">M/Hồng Nhạt</div>
+                          <div class="item money">Giá: 150.000đ</div>
+                        </div>
+                      </div>
+
+                      <div class="devider-dashed"></div>
+                    </div>
+
+                    <div class="total-money money d-flex justify-content-end">
+                      <div>Tổng:</div>
+                      <div class="cart-price">300.000 đ</div>
+                    </div>
+
+                    <!-- <a href="#" class="view-to-cart">
+                      <span class="cart-view-title">XEM GIỎ HÀNG</span>
+                      <img src="./assets/images/next.png" alt="next" />
+                    </a> -->
+                    <div class="text-center">
+                      <a href="#" class="cart-link cart-payment"
+                        >THANH TOÀN GIỎ HÀNG</a
+                      >
+                      <a href="#" class="cart-link cart-continue"
+                        >TIẾP TỤC MUA HÀNG</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="d-none d-xxl-block">Giỏ Hàng</span>
+            </div>
+          </div>
+          <div class="col-2 d-flex justify-content-end d-xl-none">
             <div class="dropdown dropstart">
-              <div class="icon-cart" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="./assets/images/cart.png" class="icon-search-mobile"/>
+              <div
+                class="mr-4"
+                id="dropdownMenuLinkSearch"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/images/search.png"
+                  class="icon-search-mobile me-4"
+                />
+              </div>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="dropdownMenuLinkSearch"
+              >
+                <div class="header-search px-2">
+                  <input class="input-search" placeholder="Bạn cần tìm gì?" />
+                  <img
+                    src="./assets/images/search.png"
+                    class="icon-search pl-2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="dropdown dropstart">
+              <div
+                class="icon-cart"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./assets/images/cart.png"
+                  class="icon-search-mobile"
+                />
                 <span class="quantity-item">0</span>
               </div>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -289,12 +504,14 @@
 
                     <div class="cart-item row justify-content-between">
                       <div class="col-auto">
-                        <div class="cart-item__img ">
+                        <div class="cart-item__img">
                           <img src="./assets/images/product1.webp" alt="test" />
                         </div>
                       </div>
                       <div class="cart-item__info col">
-                        <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a></div>
+                        <div class="item">
+                          Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a>
+                        </div>
                         <div class="item">M/Hồng Nhạt</div>
                         <div class="item money">Giá: 150.000đ</div>
                       </div>
@@ -304,12 +521,14 @@
 
                     <div class="cart-item row justify-content-between">
                       <div class="col-auto">
-                        <div class="cart-item__img ">
+                        <div class="cart-item__img">
                           <img src="./assets/images/product1.webp" alt="test" />
                         </div>
                       </div>
                       <div class="cart-item__info col">
-                        <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a></div>
+                        <div class="item">
+                          Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a>
+                        </div>
                         <div class="item">M/Hồng Nhạt</div>
                         <div class="item money">Giá: 150.000đ</div>
                       </div>
@@ -324,300 +543,386 @@
                   </div>
 
                   <!-- <a href="#" class="view-to-cart">
-                      <span class="cart-view-title">XEM GIỎ HÀNG</span>
-                      <img src="./assets/images/next.png" alt="next" />
-                    </a> -->
-                  <div class="text-center">
-                    <a href="#" class="cart-link cart-payment">THANH TOÀN GIỎ HÀNG</a>
-                    <a href="#" class="cart-link cart-continue">TIẾP TỤC MUA HÀNG</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <span class="d-none d-xxl-block">Giỏ Hàng</span>
-          </div>
-        </div>
-        <div class="col-2 d-flex justify-content-end d-xl-none">
-          <div class="dropdown dropstart">
-            <div class="mr-4" id="dropdownMenuLinkSearch" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./assets/images/search.png" class="icon-search-mobile me-4"/>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkSearch">
-              <div class="header-search px-2">
-                <input class="input-search" placeholder="Bạn cần tìm gì?" />
-                <img src="./assets/images/search.png" class="icon-search pl-2"/>
-              </div>
-            </div>
-          </div>
-          <div class="dropdown dropstart">
-            <div class="icon-cart" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./assets/images/cart.png" class="icon-search-mobile"/>
-              <span class="quantity-item">0</span>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <div class="wrap-cart-view">
-                <div class="cart-title">
-                  <h4>Giỏ Hàng</h4>
-                  <div>Bạn đang có 2 sản phẩm trong giỏ hàng</div>
-                </div>
-                <div class="cart-items">
-                  <div class="devider-dashed"></div>
-
-                  <div class="cart-item row justify-content-between">
-                    <div class="col-auto">
-                      <div class="cart-item__img ">
-                        <img src="./assets/images/product1.webp" alt="test" />
-                      </div>
-                    </div>
-                    <div class="cart-item__info col">
-                      <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a></div>
-                      <div class="item">M/Hồng Nhạt</div>
-                      <div class="item money">Giá: 150.000đ</div>
-                    </div>
-                  </div>
-
-                  <div class="devider-dashed"></div>
-
-                  <div class="cart-item row justify-content-between">
-                    <div class="col-auto">
-                      <div class="cart-item__img ">
-                        <img src="./assets/images/product1.webp" alt="test" />
-                      </div>
-                    </div>
-                    <div class="cart-item__info col">
-                      <div class="item">Sản phẩm số 1 <a class="delete-item" href="#">XÓA</a></div>
-                      <div class="item">M/Hồng Nhạt</div>
-                      <div class="item money">Giá: 150.000đ</div>
-                    </div>
-                  </div>
-
-                  <div class="devider-dashed"></div>
-                </div>
-
-                <div class="total-money money d-flex justify-content-end">
-                  <div>Tổng:</div>
-                  <div class="cart-price">300.000 đ</div>
-                </div>
-
-                <!-- <a href="#" class="view-to-cart">
                     <span class="cart-view-title">XEM GIỎ HÀNG</span>
                     <img src="./assets/images/next.png" alt="next" />
                   </a> -->
-                <div class="text-center">
-                  <a href="#" class="cart-link cart-payment">THANH TOÀN GIỎ HÀNG</a>
-                  <a href="#" class="cart-link cart-continue">TIẾP TỤC MUA HÀNG</a>
+                  <div class="text-center">
+                    <a href="#" class="cart-link cart-payment"
+                      >THANH TOÀN GIỎ HÀNG</a
+                    >
+                    <a href="#" class="cart-link cart-continue"
+                      >TIẾP TỤC MUA HÀNG</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-  </div>
-
-
-  <!-- Devider -->
-  <div class="devider text-white mb-2">
-    <div class="container">
-      <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb" class="breadcrumb-primary">
-        <ol class="breadcrumb mb-0">
-          <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
-          <li class="breadcrumb-item active" aria-current="page">GIỎ HÀNG</li>
-        </ol>
-      </nav>
+      </header>
     </div>
-  </div>
 
-  <div class="container  mt-4">
-      <div class="col-9">
+    <!-- Devider -->
+    <div class="devider text-white mb-2">
+      <div class="container">
+        <nav
+          style="--bs-breadcrumb-divider: '|'"
+          aria-label="breadcrumb"
+          class="breadcrumb-primary"
+        >
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">GIỎ HÀNG</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="col-12 col-sm-9">
         <div class="container">
           <div class="row">
             <div class="col cart-title-page">GIỎ HÀNG CỦA BẠN</div>
-            <a href="#" class="col-auto cart-link-info">CSHK: 0898.100.009</a>
-            <a href="#" class="col-auto cart-link-info">CHÍNH SÁCH VẬN CHUYỂN</a>
-            <a href="#" class="col-auto cart-link-info no-border">QUY ĐỊNH ĐỔI TRẢ</a>
+            <a href="#" class="d-none d-sm-block col-auto cart-link-info"
+              >CSHK: 0898.100.009</a
+            >
+            <a href="#" class="d-none d-sm-block col-auto cart-link-info"
+              >CHÍNH SÁCH VẬN CHUYỂN</a
+            >
+            <a
+              href="#"
+              class="d-none d-sm-block col-auto cart-link-info no-border"
+              >QUY ĐỊNH ĐỔI TRẢ</a
+            >
           </div>
-          <div class="wrap-cart-content">
-            <div class="row">
+          <div class="text-18 d-block d-sm-none">
+            Có <b>2</b> sản phẩm trong giỏ hàng
+          </div>
+          <div class="wrap-cart-content page-cart">
+            <div class="row d-none d-sm-flex">
               <div class="col head-title">SẢN PHẨM</div>
               <div class="col-2 head-title text-center">SỐ LƯỢNG</div>
               <div class="col-2 head-title text-center">GIÁ TIỀN</div>
               <div class="col-2 head-title text-center">TỔNG TIỀN</div>
             </div>
-            <div class="row g-0 devider-solid mt-3"></div>
-            <div class="row pt-4">
-              <div class="col">
-                <div class="cart-items">
-                  <div class="cart-item p-0 row justify-content-between">
-                    <div class="col-auto">
-                      <div class="cart-item__img item-img-cart">
-                        <img src="./assets/images/product1.webp" alt="test" />
+            <div class="row g-0 devider-solid mt-3 d-none d-sm-block"></div>
+            <div class="page-cart__scroll">
+              <div class="row pt-4">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="cart-item__info col">
-                      <div class="item cart-title-product">Sản phẩm số 1 <a class="delete-item text-secondary fw-300 text-12" href="#">XÓA</a></div>
-                      <div class="item">M/Hồng Nhạt</div>
-                      <div class="item money">FREESIZE</div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số 1 asd a sa as das as a asd a as
+                          <a
+                            class="delete-item text-secondary fw-300 text-12"
+                            href="#"
+                            >XÓA</a
+                          >
+                        </div>
+                        <div class="d-sm-none d-block text-18 text-sm-14">
+                          <b>185.000</b> vnđ
+                        </div>
+                        <div class="item">M/Hồng Nhạt</div>
+                        <div class="item money d-sm-block d-none">FREESIZE</div>
+                        <div class="d-sm-none d-block">
+                          <div class="wrap-input-counter">
+                            <span class="counter-btn minus">-</span>
+                            <input
+                              class="input-counter"
+                              type="text"
+                              value="1"
+                            />
+                            <span class="counter-btn plus">+</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-2">
-                <div class=" wrap-input-counter text-center">
-                  <span class="counter-btn minus">-</span>
-                  <input class="input-counter" type="text" value="1"/>
-                  <span class="counter-btn plus">+</span>
+                <div class="d-sm-block d-none col-2">
+                  <div class="wrap-input-counter text-center">
+                    <span class="counter-btn minus">-</span>
+                    <input class="input-counter" type="text" value="1" />
+                    <span class="counter-btn plus">+</span>
+                  </div>
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
                 </div>
               </div>
-              <div class="col-2 text-center text-14"><b>185.000</b> vnđ</div>
-              <div class="col-2 text-center text-14"><b>185.000</b> vnđ</div>
-            </div>
-            <div class="row pt-4">
-              <div class="col">
-                <div class="cart-items">
-                  <div class="cart-item p-0 row justify-content-between">
-                    <div class="col-auto">
-                      <div class="cart-item__img item-img-cart">
-                        <img src="./assets/images/product1.webp" alt="test" />
+              <div class="row pt-4">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                        </div>
                       </div>
-                    </div>
-                    <div class="cart-item__info col">
-                      <div class="item cart-title-product">Sản phẩm số 1 <a class="delete-item text-secondary fw-300 text-12" href="#">XÓA</a></div>
-                      <div class="item">M/Hồng Nhạt</div>
-                      <div class="item money">FREESIZE</div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số 1 asd a sa as das as a asd a as
+                          <a
+                            class="delete-item text-secondary fw-300 text-12"
+                            href="#"
+                            >XÓA</a
+                          >
+                        </div>
+                        <div class="d-sm-none d-block text-18 text-sm-14">
+                          <b>185.000</b> vnđ
+                        </div>
+                        <div class="item">M/Hồng Nhạt</div>
+                        <div class="item money d-sm-block d-none">FREESIZE</div>
+                        <div class="d-sm-none d-block">
+                          <div class="wrap-input-counter">
+                            <span class="counter-btn minus">-</span>
+                            <input
+                              class="input-counter"
+                              type="text"
+                              value="1"
+                            />
+                            <span class="counter-btn plus">+</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-2">
-                <div class=" wrap-input-counter text-center">
-                  <span class="counter-btn minus">-</span>
-                  <input class="input-counter" type="text" value="1"/>
-                  <span class="counter-btn plus">+</span>
+                <div class="d-sm-block d-none col-2">
+                  <div class="wrap-input-counter text-center">
+                    <span class="counter-btn minus">-</span>
+                    <input class="input-counter" type="text" value="1" />
+                    <span class="counter-btn plus">+</span>
+                  </div>
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
                 </div>
               </div>
-              <div class="col-2 text-center text-14"><b>185.000</b> vnđ</div>
-              <div class="col-2 text-center text-14"><b>185.000</b> vnđ</div>
+              <div class="row pt-4">
+                <div class="col">
+                  <div class="cart-items">
+                    <div class="cart-item p-0 row justify-content-between">
+                      <div class="col-auto">
+                        <div class="cart-item__img item-img-cart">
+                          <img src="./assets/images/product1.webp" alt="test" />
+                        </div>
+                      </div>
+                      <div class="cart-item__info col">
+                        <div class="item cart-title-product">
+                          Sản phẩm số 1 asd a sa as das as a asd a as
+                          <a
+                            class="delete-item text-secondary fw-300 text-12"
+                            href="#"
+                            >XÓA</a
+                          >
+                        </div>
+                        <div class="d-sm-none d-block text-18 text-sm-14">
+                          <b>185.000</b> vnđ
+                        </div>
+                        <div class="item text-sm-14 text-12">M/Hồng Nhạt</div>
+                        <div class="item money d-sm-block d-none">FREESIZE</div>
+                        <div class="d-sm-none d-block">
+                          <div class="wrap-input-counter">
+                            <span class="counter-btn minus">-</span>
+                            <input
+                              class="input-counter"
+                              type="text"
+                              value="1"
+                            />
+                            <span class="counter-btn plus">+</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-sm-block d-none col-2">
+                  <div class="wrap-input-counter text-center">
+                    <span class="counter-btn minus">-</span>
+                    <input class="input-counter" type="text" value="1" />
+                    <span class="counter-btn plus">+</span>
+                  </div>
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
+                </div>
+                <div class="d-sm-block d-none col-2 text-center text-14">
+                  <b>185.000</b> vnđ
+                </div>
+              </div>
             </div>
-            <div class="devider-solid pt-4"></div>
-            <div class="pt-4 wrap-payment">
+            <div class="d-none d-sm-block devider-solid pt-4"></div>
+            <div class="pt-2 pt-sm-4 wrap-payment">
+              <div class="d-flex flex-column d-sm-none bg-color-gray p-3">
+                <div class="d-flex justify-content-between">
+                  <span>Tạm tính:</span>
+                  <span>300.000 đ</span>
+                </div>
+                <div class="d-flex justify-content-between mt-1">
+                  <span>Phí vận chuyển:</span>
+                  <span>20.000 đ</span>
+                </div>
+                <div class="devider-dashed my-3"></div>
+                <div class="d-flex justify-content-between">
+                  <span>Tổng tiền thanh toán:</span>
+                  <span class="text-18"><b>320.000 đ</b></span>
+                </div>
+              </div>
               <div class="d-flex flex-column">
-                <div class="total-quantity">Tổng sản phẩm: 4</div>
-                <div class="total-bill pt-1"><b class="text-decoration-underline me-2 text-22 fw-300">Tổng:</b> <b>568.000</b> <b class="fw-300 text-22">vnđ</b></div>
-                <button class="btn-around cart-btn-payment mt-3" type="button">THANH TOÁN</button>
-                <button class="btn-around cart-btn-continue" type="button">Tiếp tục mua hàng</button>
+                <div class="d-none d-sm-block">
+                  <div class="total-quantity">Tổng sản phẩm: 4</div>
+                  <div class="total-bill pt-1">
+                    <b class="text-decoration-underline me-2 text-22 fw-300"
+                      >Tổng:</b
+                    >
+                    <b>568.000</b> <b class="fw-300 text-22">vnđ</b>
+                  </div>
+                </div>
+                <button class="btn-around cart-btn-payment mt-3" type="button">
+                  THANH TOÁN
+                </button>
+                <button class="btn-around cart-btn-continue" type="button">
+                  Tiếp tục mua hàng
+                </button>
               </div>
-              
+            </div>
+            <div class="d-flex d-sm-none bg-color-gray cart-advise">
+              <a href="#" class="text-10 cart-link-info">CSHK: 0898.100.009</a>
+              <div class="border-right"></div>
+              <a href="#" class="text-10 cart-link-info"
+                >CHÍNH SÁCH VẬN CHUYỂN</a
+              >
+              <div class="border-right"></div>
+              <a href="#" class="text-10 cart-link-info no-border"
+                >QUY ĐỊNH ĐỔI TRẢ</a
+              >
             </div>
           </div>
+        </div>
       </div>
-  </div>
+    </div>
 
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer__column col-7 col-lg-4 mb-4 mb-xl-0">
+            <p>VM STYLE</p>
+            <ul class="list-items">
+              <li>
+                VM STYLE - Thương hiệu thời trang dành cho giới trẻ hàng đầu tại
+                Việt Nam
+              </li>
+              <li>Địa Chỉ: 126 Tân Sơn Nhì, Q. Tân Phú, TP. Hồ Chí Minh</li>
+              <li>Mua Hàng Online: 0938.528.068</li>
+              <li>CSKH: 0898.100.009</li>
+            </ul>
+          </div>
+          <div class="footer__column col-5 col-lg-2 mb-4 mb-xl-0">
+            <p>THƯƠNG HIỆU</p>
+            <ul class="list-items">
+              <li class="item-link">
+                <a href="#">Về Chúng Tôi </a>
+              </li>
+              <li class="item-link">
+                <a href="#">Tin Tức</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Tuyển Dụng</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Blog</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Hợp Tác</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column col-7 col-lg-3">
+            <p>HỖ TRỢ</p>
+            <ul class="list-items">
+              <li class="item-link">
+                <a href="#">Hỏi Đáp</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Hướng Dẫn Chọn Size</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Chính Sách Mua Hàng</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Chính Sách Vận Chuyển</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Chính Sách Thanh Toán</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Quy Định Đổi Trả</a>
+              </li>
+              <li class="item-link">
+                <a href="#">Tra Cứu Điểm Thẻ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__column col-5 col-lg-3">
+            <p>KẾT NỐI VỚI CHÚNG TÔI</p>
+            <div class="social-list mb-10">
+              <a href="#">
+                <img src="./assets/images/ig.jpeg" alt="fb" />
+              </a>
+              <a href="#">
+                <img src="./assets/images/ig.jpeg" alt="ig" />
+              </a>
+              <a href="#">
+                <img src="./assets/images/ig.jpeg" alt="yb" />
+              </a>
+            </div>
+            <p>SHOPPING</p>
+            <div class="social-list">
+              <a href="#">
+                <img src="./assets/images/ig.jpeg" alt="sp" />
+              </a>
+              <a href="#">
+                <img src="./assets/images/ig.jpeg" alt="laz" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Footer -->
-  <div class="footer ">
+    <!-- Copyrighter -->
+
     <div class="container">
-      <div class="row">
-        <div class="footer__column col-7 col-lg-4 mb-4 mb-xl-0">
-          <p>VM STYLE</p>
-          <ul class="list-items">
-            <li>
-              VM STYLE - Thương hiệu thời trang dành cho giới trẻ hàng đầu tại
-              Việt Nam
-            </li>
-            <li>Địa Chỉ: 126 Tân Sơn Nhì, Q. Tân Phú, TP. Hồ Chí Minh</li>
-            <li>Mua Hàng Online: 0938.528.068</li>
-            <li>CSKH: 0898.100.009</li>
-          </ul>
-        </div>
-        <div class="footer__column col-5 col-lg-2 mb-4 mb-xl-0">
-          <p>THƯƠNG HIỆU</p>
-          <ul class="list-items">
-            <li class="item-link">
-              <a href="#">Về Chúng Tôi </a>
-            </li>
-            <li class="item-link">
-              <a href="#">Tin Tức</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Tuyển Dụng</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Blog</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Hợp Tác</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__column col-7 col-lg-3">
-          <p>HỖ TRỢ</p>
-          <ul class="list-items">
-            <li class="item-link">
-              <a href="#">Hỏi Đáp</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Hướng Dẫn Chọn Size</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Chính Sách Mua Hàng</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Chính Sách Vận Chuyển</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Chính Sách Thanh Toán</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Quy Định Đổi Trả</a>
-            </li>
-            <li class="item-link">
-              <a href="#">Tra Cứu Điểm Thẻ</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__column col-5 col-lg-3">
-          <p>KẾT NỐI VỚI CHÚNG TÔI</p>
-          <div class="social-list mb-10">
-            <a href="#">
-              <img src="./assets/images/ig.jpeg" alt="fb" />
-            </a>
-            <a href="#">
-              <img src="./assets/images/ig.jpeg" alt="ig" />
-            </a>
-            <a href="#">
-              <img src="./assets/images/ig.jpeg" alt="yb" />
-            </a>
-          </div>
-          <p>SHOPPING</p>
-          <div class="social-list">
-            <a href="#">
-              <img src="./assets/images/ig.jpeg" alt="sp" />
-            </a>
-            <a href="#">
-              <img src="./assets/images/ig.jpeg" alt="laz" />
-            </a>
-          </div>
-        </div>
+      <div class="copyright">
+        Bản quyền thuộc về VM Style. Cung cấp bởi VM Style
       </div>
     </div>
 
-  </div>
-
-  <!-- Copyrighter -->
-
-  <div class="container">
-    <div class="copyright">
-      Bản quyền thuộc về VM Style. Cung cấp bởi VM Style
-    </div>
-  </div>
-
-  <!-- Script -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="./assets/js/lib/slick.min.js"></script>
-  <script type="text/javascript" src="./assets/js/slides.js"></script>
-  <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Script -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="./assets/js/lib/slick.min.js"></script>
+    <script type="text/javascript" src="./assets/js/slides.js"></script>
+    <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
